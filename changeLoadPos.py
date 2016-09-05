@@ -9,10 +9,10 @@ csv_f = csv.reader(f)
 o = open('loadPositionEdit.csv','w') #opens new loadPosition.csv
 csv_o = csv.writer(o)
 for row in csv_f:
-      changedRow = row.copy()
+      changedRow = copy.copy(row)
       for i in range(0,5):
           if i > 0:
-              changedRow = row.copy() #Resets changedRow
+              changedRow = copy.copy(row) #Resets changedRow
               changedRow[0] = row[0]+str(i)
               copyfile(str(row[0])+'.inp',str(changedRow[0])+'.inp')
               if i == 1:
