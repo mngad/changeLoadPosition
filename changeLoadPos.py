@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 import csv
 import copy
+import os
+from shutil import copyfile
 
 f = open('loadPosition.csv') #opens initial loadPosition.csv
 csv_f = csv.reader(f)
@@ -12,6 +14,7 @@ for row in csv_f:
           if i > 0:
               changedRow = row.copy() #Resets changedRow
               changedRow[0] = row[0]+str(i)
+              copyfile(str(row[0])+'.inp',str(changedRow[0])+'.inp')
               if i == 1:
                   changedRow[2] = int(row[2])-1 #North
               if i == 2:
