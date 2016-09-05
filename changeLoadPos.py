@@ -10,7 +10,7 @@ o = open('loadPositionEdit.csv','w') #opens new loadPosition.csv
 csv_o = csv.writer(o)
 for row in csv_f:
       changedRow = copy.copy(row)
-      for i in range(0,5):
+      for i in range(0,9):
           if i > 0:
               changedRow = copy.copy(row) #Resets changedRow
               changedRow[0] = row[0]+str(i)
@@ -23,6 +23,14 @@ for row in csv_f:
                   changedRow[2] = int(row[2])+1 #South
               if i == 4:
                   changedRow[1] = int(row[1])-1 #West
+              if i == 5:
+                  changedRow[2] = int(row[2])-2 #North
+              if i == 6:
+                  changedRow[1] = int(row[1])+2 #East
+              if i == 7:
+                  changedRow[2] = int(row[2])+2 #South
+              if i == 8:
+                  changedRow[1] = int(row[1])-2 #West
           csv_o.writerow(changedRow)
 o.close()
 o2 = open('loadPositionEdit.csv')
