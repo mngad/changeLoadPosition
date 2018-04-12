@@ -14,23 +14,23 @@ int main(){
 	while(in.read_row(name, posX, posY, posZ)){
 		for(int i = 0; i<9;i++){
 			if(i==0)
-				outfile << name<<", "<<posX<<", "<<posY<<", "<<posZ<<std::endl;	
+				outfile << name<<", "<<posX<<", "<<posY<<", "<<posZ<<std::endl;
 			if(i==1)
-				outfile << name<<i<<", "<<posX<<", "<<posY-1<<", "<<posZ<<std::endl;	
+				outfile << name<<i<<", "<<posX<<", "<<posY-1<<", "<<posZ<<std::endl;
 			if(i==2)
-				outfile << name<<i<<", "<<posX+1<<", "<<posY<<", "<<posZ<<std::endl;	
+				outfile << name<<i<<", "<<posX+1<<", "<<posY<<", "<<posZ<<std::endl;
 			if(i==3)
-				outfile << name<<i<<", "<<posX<<", "<<posY+1<<", "<<posZ<<std::endl;	
+				outfile << name<<i<<", "<<posX<<", "<<posY+1<<", "<<posZ<<std::endl;
 			if(i==4)
-				outfile << name<<i<<", "<<posX-1<<", "<<posY<<", "<<posZ<<std::endl;	
+				outfile << name<<i<<", "<<posX-1<<", "<<posY<<", "<<posZ<<std::endl;
 			if(i==5)
-				outfile << name<<i<<", "<<posX<<", "<<posY-2<<", "<<posZ<<std::endl;	
+				outfile << name<<i<<", "<<posX<<", "<<posY-2<<", "<<posZ<<std::endl;
 			if(i==6)
-				outfile << name<<i<<", "<<posX+2<<", "<<posY<<", "<<posZ<<std::endl;	
+				outfile << name<<i<<", "<<posX+2<<", "<<posY<<", "<<posZ<<std::endl;
 			if(i==7)
-				outfile << name<<i<<", "<<posX<<", "<<posY+2<<", "<<posZ<<std::endl;	
+				outfile << name<<i<<", "<<posX<<", "<<posY+2<<", "<<posZ<<std::endl;
 			if(i==8)
-				outfile << name<<i<<", "<<posX-2<<", "<<posY<<", "<<posZ<<std::endl;	
+				outfile << name<<i<<", "<<posX-2<<", "<<posY<<", "<<posZ<<std::endl;
 			if(i>=1){
 				std::string oldFname = name + ".inp";
 				std::string newFname = name + std::to_string(i) + ".inp";
